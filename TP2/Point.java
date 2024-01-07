@@ -7,24 +7,15 @@ import java.awt.Color;
  * @author  Xavier Crégut <Prénom.Nom@enseeiht.fr>
  */
 public class Point {
-
-	private double x;		// abscisse
-	private double y;		// ordonnée
-	private Color couleur;	// couleur du point
-
 	/** Construire un point à partir de son abscisse et de son ordonnée.
 	 * @param vx abscisse
 	 * @param vy ordonnée
 	 */
 	public Point(double vx, double vy) {
-		System.out.println("CONSTRUCTEUR Point(" + vx + ", " + vy + ")");
+		// System.out.println("CONSTRUCTEUR Point(" + vx + ", " + vy + ")");
 		this.x = vx;
 		this.y = vy;
 		this.couleur = Color.green;
-	}
-
-	public Point() {
-	
 	}
 
 	/** Obtenir l'abscisse du point.
@@ -68,7 +59,7 @@ public class Point {
 		return Math.sqrt(Math.pow(autre.x - this.x, 2)
 					+ Math.pow(autre.y - this.y, 2));
 	}
- 
+
    /** Translater le point.
 	* @param dx déplacement suivant l'axe des X
 	* @param dy déplacement suivant l'axe des Y
@@ -94,7 +85,7 @@ public class Point {
 		this.couleur = nouvelleCouleur;
 	}
 
-
+/*
 	// La méthode finalize est appelée avant que le récupérateur de
 	// mémoire ne détruise l'objet.  Attention toutefois, on ne sait
 	// pas quand ces ressources seront libérées et il est donc
@@ -111,7 +102,7 @@ public class Point {
 		this.afficher();
 		System.out.println();
 	}
-
+*/
 
 //	Représentation interne d'un point
 //	---------------------------------
@@ -119,6 +110,8 @@ public class Point {
 // Remarque : en Java, il est conseillé (convention de programmation)
 // de mettre les attributs au début de la classe.
 
-	
+	private double x;		// abscisse
+	private double y;		// ordonnée
+	private Color couleur;	// couleur du point
 
 }
